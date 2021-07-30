@@ -1,5 +1,7 @@
 # Terminology and Tooling in Mutli-agent System (MAS)
 
+Author: Iori Mizutani ([@iomz](https://github.com/iomz))
+
 MAS [is a computerized system composed of multiple interacting intelligent agents](https://en.wikipedia.org/wiki/Multi-agent_system) to solve problems that cannot be solved by a monolithic approach.
 
 The definition of intelligent agents varies between different approaches such as methodic, functional, procedural approaches, algorithmic search, or reinforcement learning.
@@ -16,7 +18,6 @@ Due to the nature of horn-clauses, it is difficult to learn the [operators](http
 
 ## [Jason](https://github.com/jason-lang/jason)
 Jason is an interpreter implemented in Java and the language interpreted by Jason is an "extended version" of AgentSpeak [[2]](#bordini2007programming) – the extension includes user-defined components (e.g., [__internal actions__](http://jason.sourceforge.net/api/jason/stdlib/package-summary.html)) programmed in Java.
-Jason also provides a platform (i.e., the Swing-based GUI called "MAS Console") for the development of multi-agent systems.
 For this reason, Jason is often used to also refer to the extended language.
 Jason initially stood for "Java-based Agentspeak interpreter used with Saci for multi-agent distribution Over the Net", but it is not based only on SACI anymore.
 
@@ -30,6 +31,7 @@ In JaCa, Jason is adopted to program the agents, and CArtAgo as the framework to
 The autonomous BDI agents in JaCaMo MAS are organized by Moise.
 Hence, JaCaMo is a hierachical MAS framework consisting of three levels: organization (Moise) -> agents (Jason) -> environments (CArtAgO).
 All the (major) implementations for the three levels are in Java, so the researchers and developers need to be familiar with Java.
+JaCaMo also provides a platform (i.e., the Swing-based GUI called "MAS Console" with the Eclipse plugin) for the development of multi-agent systems integrating the three levels, but also as a command-line script to execute `.jcm` files which contain [coordination](http://jacamo.sourceforge.net/tutorial/coordination/) parameters.
 
 ## Artifiact
 __Artifacts__ in the context of JaCaMo are the basic computational bricks defining the environment structure and behavior, representing those resources and tools that agents can create, discover, perceive, and use at runtime.
